@@ -20,6 +20,7 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         install-patrol-cli = "flutter pub global activate patrol_cli";
+        pub-get = "flutter pub get";
         default.openFiles = [ "integration_test/quiz_test.dart" ];
       };
 

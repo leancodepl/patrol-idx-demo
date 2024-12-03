@@ -1,6 +1,6 @@
 {
-    "name": "Hello world",
-    "description": "A template for a CLI program that prints 'hello world'",
-    "icon": "https://www.gstatic.com/images/branding/productlogos/idx/v1/192px.svg",
+    "name": "Patrol demo",
+    "description": "A template for a demo project using Patrol testing framework",
+    "icon": "https://raw.githubusercontent.com/leancodepl/patrol/refs/heads/master/packages/patrol/screenshots/logo.png",
     "params": []
 }

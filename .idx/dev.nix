@@ -20,15 +20,14 @@
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
-      onCreate = {
-        install-patrol-cli = "flutter pub global activate patrol_cli 3.4.0";
-        pub-get = "flutter pub get";
-        default.openFiles = [ "integration_test/quiz_test.dart" ];
-      };
+      onCreate = { };
 
       onStart = {
-        patrol-develop = "for i in {1..10}; do
-    DEVICE_ID=$(flutter devices | grep 'emulator-.*' | awk '{print $6}')
+        default.openFiles = [ "integration_test/quiz_test.dart" ];
+        patrol-develop = "flutter pub get
+        flutter pub global activate patrol_cli 3.4.0
+        for i in {1..10}; do
+    DEVICE_ID=$(adb devices | grep 'emulator-.*' | awk '{print $1}')
     if [ -n \"$DEVICE_ID\" ]; then
       break
     fi

@@ -10,7 +10,7 @@
   ];
   # Sets environment variables in the workspace
   env = {
-    CI = "true"
+    CI = "true";
   };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"

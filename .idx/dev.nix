@@ -26,7 +26,7 @@
         default.openFiles = [ "integration_test/quiz_test.dart" ];
         patrol-develop = "flutter pub get
         flutter pub global activate patrol_cli 3.4.0
-        for i in {1..10}; do
+        while true; do
     DEVICE_ID=$(adb devices | grep 'emulator-.*' | awk '{print $1}')
     if [ -n \"$DEVICE_ID\" ]; then
       break

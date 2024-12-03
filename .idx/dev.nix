@@ -28,14 +28,14 @@
 
       onStart = {
         patrol-develop = "for i in {1..10}; do
-    DEVICE_ID=$(flutter devices | grep 'emulator-5554' | awk '{print $6}')
+    DEVICE_ID=$(flutter devices | grep 'emulator-.*' | awk '{print $6}')
     if [ -n \"$DEVICE_ID\" ]; then
       break
     fi
     echo \"Device not ready yet. Retrying in 5 seconds...\"
     sleep 5
   done
-  patrol develop -t integration_test/quiz_test.dart --flavor dev";
+  patrol develop -t integration_test/quiz_test.dart --flavor dev -d \"$DEVICE_ID\" ";
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook

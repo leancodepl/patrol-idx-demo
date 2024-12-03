@@ -29,10 +29,10 @@
       onStart = {
         patrol-develop = "for i in {1..10}; do
     DEVICE_ID=$(flutter devices | grep 'emulator-5554' | awk '{print $6}')
-    if [ -n "$DEVICE_ID" ]; then
+    if [ -n \"$DEVICE_ID\" ]; then
       break
     fi
-    echo "Device not ready yet. Retrying in 5 seconds..."
+    echo \"Device not ready yet. Retrying in 5 seconds...\"
     sleep 5
   done
   patrol develop -t integration_test/quiz_test.dart --flavor dev";

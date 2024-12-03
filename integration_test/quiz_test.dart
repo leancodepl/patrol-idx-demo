@@ -32,6 +32,8 @@ void main() {
             .tap();
       }
 
+      await $(Icons.arrow_right_alt).scrollTo();
+
       await $(RegExp('Question')).scrollTo(
         view: $(Icons.arrow_right_alt),
         step: -300,

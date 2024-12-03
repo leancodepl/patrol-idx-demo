@@ -34,7 +34,7 @@
     echo \"Device not ready yet. Retrying in 5 seconds...\"
     sleep 5
   done
-  patrol develop -t integration_test/quiz_test.dart --flavor dev -d \"$DEVICE_ID\" ";
+  patrol develop -t integration_test/quiz_test.dart --flavor dev";
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook

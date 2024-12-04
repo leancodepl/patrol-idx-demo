@@ -27,8 +27,8 @@
         patrol-develop = "flutter pub get
         flutter pub global activate patrol_cli 3.4.0
         while true; do
-    DEVICE_ID=$(adb devices | grep 'emulator-.*' | awk '{print $1}')
-    if [ -n \"$DEVICE_ID\" ]; then
+    DEVICE_ID=$(flutter devices --machine | jq '.[0] | .id' -r)
+    if [ \"$DEVICE_ID\" ~= "emulator" ]; then
       break
     fi
     echo \"Device not ready yet. Retrying in 5 seconds...\"

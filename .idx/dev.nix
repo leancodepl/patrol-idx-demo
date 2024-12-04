@@ -27,6 +27,7 @@
         patrol-develop = "flutter pub get
         flutter pub global activate patrol_cli 3.4.0
         while true; do
+        flutter devices
     DEVICE_ID=$(flutter devices --machine | jq '.[0] | .id' -r)
     if [ \"$DEVICE_ID\" ~= "emulator" ]; then
       break

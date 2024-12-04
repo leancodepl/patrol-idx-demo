@@ -29,7 +29,7 @@
         while true; do
         flutter devices
     DEVICE_ID=$(flutter devices --machine | jq '.[0] | .id' -r)
-    if [ \"$DEVICE_ID\" ~= "emulator" ]; then
+    if [[ \"$DEVICE_ID\" =~ \"emulator\" ]]; then
       break
     fi
     echo \"Device not ready yet. Retrying in 5 seconds...\"

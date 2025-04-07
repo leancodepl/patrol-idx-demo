@@ -19,8 +19,6 @@ android {
         }
         create("dev") {
             dimension = "env"
-            applicationIdSuffix = ".dev"
-            versionNameSuffix = ".dev"
             resValue("string", "app_name", "DEV Challange")
         }
     }

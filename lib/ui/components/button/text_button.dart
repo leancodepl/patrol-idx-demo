@@ -16,8 +16,8 @@ class PTTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: ButtonStyle(
-        overlayColor: MaterialStatePropertyAll(
-          PTColors.lcYellow.withOpacity(0.2),
+        overlayColor: WidgetStatePropertyAll(
+          PTColors.lcYellow.withValues(alpha: 0.2),
         ),
       ),
       onPressed: onPressed,

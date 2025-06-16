@@ -5,7 +5,7 @@
   channel = "stable-25.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.flutter
+    pkgs.flutter327
     pkgs.jdk17
     pkgs.unzip
   ];
@@ -26,7 +26,7 @@
       onStart = {
         default.openFiles = [ "integration_test/quiz_test.dart" ];
         patrol-develop = "flutter pub get
-        flutter pub global activate patrol_cli 3.5.1
+        flutter pub global activate patrol_cli 3.6.0
         while true; do
         flutter devices
     DEVICE_ID=$(flutter devices --machine | jq '.[0] | .id' -r)

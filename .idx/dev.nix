@@ -24,7 +24,11 @@
 
       onStart = {
         default.openFiles = [ "integration_test/quiz_test.dart" ];
-        patrol-develop = "flutter pub get
+        patrol-develop = "emulator
+        cd ./android && ./gradlew :clean && ./gradlew --stop && cd ..
+        rm -rf ./build
+        rm -rf ~/.gradle/caches
+        flutter pub get
         flutter pub global activate patrol_cli 3.6.0
         while true; do
         flutter devices

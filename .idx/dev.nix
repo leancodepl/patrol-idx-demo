@@ -39,6 +39,7 @@
     echo \"Device not ready yet. Retrying in 5 seconds...\"
     sleep 5
   done
+  flutter build apk --config-only -t integration_test/quiz_test.dart
   patrol develop -t integration_test/quiz_test.dart --flavor dev  --verbose";
       };
       

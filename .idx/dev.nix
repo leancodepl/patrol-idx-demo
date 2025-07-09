@@ -40,7 +40,7 @@
     sleep 5
   done
   flutter build apk --config-only -t lib/main.dart
-  patrol develop -t integration_test/quiz_test.dart --flavor dev  --verbose";
+  patrol develop -t integration_test/demo_test.dart --flavor dev  --verbose";
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook

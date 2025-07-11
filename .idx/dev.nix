@@ -39,8 +39,7 @@
     echo \"Device not ready yet. Retrying in 5 seconds...\"
     sleep 5
   done
-  flutter build apk --config-only -t lib/main.dart
-  patrol develop -t integration_test/demo_test.dart --flavor dev  --verbose";
+  dart run patrol_cli:main develop -t integration_test/demo_test.dart --flavor dev  --verbose";
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook

@@ -717,7 +717,7 @@ packages:
       path: "packages/patrol_cli"
       ref: "feat/ensure-gradle-wrapper-is-generated"
       resolved-ref: f1f9fe264f49194bf31a8575f1077ea480b61ae9
-      url: "git@github.com:leancodepl/patrol.git"
+      url: "https://github.com/leancodepl/patrol.git"
     source: git
     version: "3.8.0"
   patrol_finders:

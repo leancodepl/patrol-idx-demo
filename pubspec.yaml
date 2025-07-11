@@ -38,7 +38,7 @@ dev_dependencies:
   patrol: ^3.13.0
   patrol_cli:
     git:
-      url: git@github.com:leancodepl/patrol.git
+      url: https://github.com/leancodepl/patrol.git
       ref: feat/ensure-gradle-wrapper-is-generated
       path: packages/patrol_cli
 

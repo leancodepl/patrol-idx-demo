@@ -36,11 +36,6 @@ dev_dependencies:
     sdk: flutter
   leancode_lint: ^6.0.0
   patrol: ^3.13.0
-  patrol_cli:
-    git:
-      url: https://github.com/leancodepl/patrol.git
-      ref: feat/ensure-gradle-wrapper-is-generated
-      path: packages/patrol_cli
 
 flutter_launcher_icons:
   android: 'launcher_icon'

@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.patrol_challenge"
-        minSdk = 23
+        minSdk = flutter.minSdkVersion
         targetSdk = 35
         versionCode = flutter.versionCode
         versionName = flutter.versionName

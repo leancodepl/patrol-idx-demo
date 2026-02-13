@@ -7,7 +7,6 @@
   packages = [
     pkgs.jdk17
     pkgs.unzip
-    pkgs.flutter338  # Flutter 3.38.x to match pubspec.yaml
   ];
   # Sets environment variables in the workspace
   env = {
@@ -21,7 +20,14 @@
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
-      onCreate = { };
+      onCreate = {
+        # Upgrade Flutter to version 3.38.4 to match pubspec.yaml
+        upgrade-flutter = ''
+          flutter channel stable
+          flutter upgrade --force
+          flutter --version
+        '';
+      };
 
       onStart = {
         default.openFiles = [ "patrol_test/demo_test.dart" ];

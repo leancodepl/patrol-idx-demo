@@ -25,8 +25,7 @@ void main() {
       await $.platform.mobile
           .tapOnNotificationBySelector(Selector(textContains: 'Tap'));
       try {
-        await $.platform.android
-            .tap(AndroidSelector(textContains: 'Turn on location'));
+        await $.platform.android.tap(AndroidSelector(textContains: 'Turn on'));
       } catch (e) {
         // ignore exception
       }

@@ -47,6 +47,7 @@
     sleep 5
   done
   flutter build apk --config-only -t lib/main.dart
+  pwd && ls -la
   patrol develop -t patrol_test/demo_test.dart --flavor dev  --verbose";
       };
       

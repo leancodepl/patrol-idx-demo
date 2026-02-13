@@ -22,10 +22,10 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         # Upgrade Flutter to version 3.38.4 to match pubspec.yaml
-        upgrade-flutter = ''
-          flutter channel stable
-          flutter upgrade --force
-          flutter --version
+        # upgrade-flutter = ''
+        #  flutter channel stable
+        #  flutter upgrade --force
+        #  flutter --version
         '';
       };
 

@@ -26,7 +26,7 @@
         #  flutter channel stable
         #  flutter upgrade --force
         #  flutter --version
-        '';
+        # '';
       };
 
       onStart = {

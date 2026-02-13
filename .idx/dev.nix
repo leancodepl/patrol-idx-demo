@@ -47,7 +47,7 @@
     sleep 5
   done
   flutter build apk --config-only -t lib/main.dart
-  pwd && ls -la
+  pwd
   cd .. # not sure why terminal is in android directory here
   patrol develop -t patrol_test/demo_test.dart --flavor dev  --verbose";
       };

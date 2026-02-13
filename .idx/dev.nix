@@ -23,13 +23,13 @@
       onCreate = { };
 
       onStart = {
-        default.openFiles = [ "integration_test/quiz_test.dart" ];
+        default.openFiles = [ "patrol_test/demo_test.dart" ];
         patrol-develop = "emulator
         cd ./android && ./gradlew :clean && ./gradlew --stop && cd ..
         rm -rf ./build
         rm -rf ~/.gradle/caches
         flutter pub get
-        flutter pub global activate patrol_cli 3.6.0
+        flutter pub global activate patrol_cli 4.1.0
         while true; do
         flutter devices
     DEVICE_ID=$(flutter devices --machine | jq '.[0] | .id' -r)
@@ -40,7 +40,7 @@
     sleep 5
   done
   flutter build apk --config-only -t lib/main.dart
-  patrol develop -t integration_test/demo_test.dart --flavor dev  --verbose";
+  patrol develop -t patrol_test/demo_test.dart --flavor dev  --verbose -d emulator-5554";
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook
@@ -50,7 +50,7 @@
       enable = true;
       previews = {
         android = {
-          #command = ["patrol" "develop" "-t" "integration_test/quiz_test.dart" "--machine" "-d" "android" "-d" "localhost:5555"];
+          #command = ["patrol" "develop" "-t" "patrol_test/quiz_test.dart" "--machine" "-d" "android" "-d" "localhost:5555"];
           command = ["yes"];
           manager = "android";
         };

@@ -7,6 +7,7 @@
   packages = [
     pkgs.jdk17
     pkgs.unzip
+    pkgs.flutter338  # Flutter 3.38.x to match pubspec.yaml
   ];
   # Sets environment variables in the workspace
   env = {
@@ -40,7 +41,7 @@
     sleep 5
   done
   flutter build apk --config-only -t lib/main.dart
-  patrol develop -t patrol_test/demo_test.dart --flavor dev  --verbose -d emulator-5554";
+  patrol develop -t patrol_test/demo_test.dart --flavor dev  --verbose";
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook

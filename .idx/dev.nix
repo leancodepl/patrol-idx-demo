@@ -57,7 +57,7 @@
       enable = true;
       previews = {
         android = {
-          #command = ["patrol" "develop" "-t" "patrol_test/quiz_test.dart" "--machine" "-d" "android" "-d" "localhost:5555"];
+          #command = ["patrol" "develop" "-t" "patrol_test/demo_test.dart" "--machine" "-d" "android" "-d" "localhost:5555"];
           command = ["yes"];
           manager = "android";
         };
